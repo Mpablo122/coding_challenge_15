@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-     // Task 2: Adding Risk Items Dynamically
+// Task 2: Adding Risk Items Dynamically
     const riskDashboard = document.getElementById("riskDashboard");
     const riskForm = document.getElementById("riskForm");
     const riskInput = document.getElementById("riskInput");
@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
                               <strong>Risk Level:</strong> ${riskLevel}<br>
                               <strong>Department:</strong> ${department}<br>`;
         
-        // Task 3: Removing Risk Items
+// Task 3: Removing Risk Items
         const resolveButton = document.createElement("button");
         resolveButton.textContent = "Resolve";
         resolveButton.addEventListener("click", function (event) {
@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
         riskCard.appendChild(resolveButton);
         
-        // Task 4: Categorizing Risks by Level
+// Task 4: Risk categorization
         if (riskLevel === "Low") {
             riskCard.style.backgroundColor = "green";
         } else if (riskLevel === "Medium") {
@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    // Task 5: Implementing Bulk Updates
+// Task 5: Implementing Bulk Updates
     const increaseRiskButton = document.createElement("button");
     increaseRiskButton.textContent = "Increase Risk Levels";
     increaseRiskButton.addEventListener("click", function () {
@@ -63,12 +63,12 @@ document.addEventListener("DOMContentLoaded", function () {
     });
     document.body.insertBefore(increaseRiskButton, riskDashboard);
 
-    // Task 6: Handling Event Propagation
+// Task 6: Handling Event Propagation
     riskDashboard.addEventListener("click", function (event) {
         event.stopPropagation();
     });
 
-    // Test cases
+    // The test Cases
     addRiskItem("Data Breach", "High", "IT");
     addRiskItem("Supply Chain Disruption", "Medium", "Operations");
     addRiskItem("Market Fluctuations", "High", "Finance");
