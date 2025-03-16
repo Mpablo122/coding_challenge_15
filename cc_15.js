@@ -53,3 +53,18 @@ increaseRiskButton.addEventListener("click", function () {
         }
     });
 });
+document.body.insertBefore(increaseRiskButton, riskDashboard);
+
+// Task 6: Handling Event Propagation
+riskDashboard.addEventListener("click", function (event) {
+    event.stopPropagation();
+});
+
+// Test cases
+addRiskItem("Data Breach", "High", "IT");
+addRiskItem("Supply Chain Disruption", "Medium", "Operations");
+addRiskItem("Market Fluctuations", "High", "Finance");
+addRiskItem("Cybersecurity Threat", "High", "IT");
+addRiskItem("HR Compliance Issue", "Low", "Human Resources");
+addRiskItem("Employee Retention", "Low", "HR");
+});
