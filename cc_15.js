@@ -14,3 +14,26 @@ function addRiskItem(riskName, riskLevel, department) {
       riskDashboard.removeChild(riskCard);
   });
   riskCard.appendChild(resolveButton);
+
+   // Task 4: Categorizing Risks by Level
+   if (riskLevel === "Low") {
+    riskCard.style.backgroundColor = "green";
+} else if (riskLevel === "Medium") {
+    riskCard.style.backgroundColor = "yellow";
+} else if (riskLevel === "High") {
+    riskCard.style.backgroundColor = "red";
+}
+
+riskDashboard.appendChild(riskCard);
+}
+
+riskForm.addEventListener("submit", function (event) {
+event.preventDefault();
+const riskName = riskInput.value.trim();
+const riskLevel = "Medium"; // Default risk level for now
+const department = "General"; // Default department for now
+if (riskName) {
+    addRiskItem(riskName, riskLevel, department);
+    riskInput.value = "";
+}
+});
