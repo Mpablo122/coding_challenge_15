@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
     document.body.insertBefore(increaseRiskButton, riskDashboard);
 
-// Task 6: Handling Event Propagation
+// Task 6: Event Propagation fix
     riskDashboard.addEventListener("click", function (event) {
         event.stopPropagation();
     });
