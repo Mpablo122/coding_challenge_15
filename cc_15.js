@@ -46,7 +46,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-// Task 5: Implementing Bulk Updates
+// Task 5: Bulk Risk Updates
     const increaseRiskButton = document.createElement("button");
     increaseRiskButton.textContent = "Increase Risk Levels";
     increaseRiskButton.addEventListener("click", function () {
