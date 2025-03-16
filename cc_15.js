@@ -37,3 +37,19 @@ if (riskName) {
     riskInput.value = "";
 }
 });
+
+// Task 5: Implementing Bulk Updates
+const increaseRiskButton = document.createElement("button");
+increaseRiskButton.textContent = "Increase Risk Levels";
+increaseRiskButton.addEventListener("click", function () {
+    document.querySelectorAll(".riskCard").forEach(card => {
+        let riskText = card.innerHTML;
+        if (riskText.includes("Low")) {
+            card.innerHTML = riskText.replace("Low", "Medium");
+            card.style.backgroundColor = "yellow";
+        } else if (riskText.includes("Medium")) {
+            card.innerHTML = riskText.replace("Medium", "High");
+            card.style.backgroundColor = "red";
+        }
+    });
+});
